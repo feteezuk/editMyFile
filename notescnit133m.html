@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CNIT 133A CONTENT EDITABLE NOTES</title>
+	<style>
+h1{
+	border:2px dotted green;
+}
+h1:hover{
+	background-color:blue;
+	color:white;
+
+}
+
+	</style>
+
+</head>
+<body>
+
+<h2>Please click and write in the field below
+<h1 id="save" contenteditable="true">
+	
+	Edit me Please
+</h1>
+
+<button onclick="off()"> Save my Edit</button>
+<p id="blah"></p>
+
+<script>
+	function off() {
+document.getElementById("save").contentEditable = false;
+var t = document.createTextNode("Your File has been Saved");
+    document.getElementById("blah").appendChild(t);
+}
+</script>
+</body>
+</html>
